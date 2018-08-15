@@ -230,3 +230,12 @@ body > div:last-child {
 .no-edit .hide-button{
   display:none;
 }
+
+.no-edit #table td, 
+.no-edit #table th{  
+  cursor: default;
+  -webkit-user-select: initial;
+  -moz-user-select: initial;
+  -ms-user-select: initial;
+  user-select: initial;
+}
