@@ -1,0 +1,222 @@
+
+* {
+  margin:0;
+  padding:0;
+}
+
+body > div:last-child {
+  display: none !important;
+}
+
+#container {
+  width: 90%;
+  margin:0 auto;
+}
+
+#tabs {
+  margin-top:20px;
+  margin-bottom:20px;
+}
+
+#tabs li {
+  display: inline-block;
+  min-width: 80px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 20px;
+  cursor: pointer;
+  text-align: center;
+  margin-right: 20px;
+  padding: 0 10px;
+}
+
+#tabs li.active {
+  color: #fff;
+  background-color: #2c65a5;
+  cursor: default;
+}
+
+.tab-content {
+  display:none;
+}
+
+#add,
+.do-button {
+  width: 100px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 20px;
+  border: 1px solid #000;
+  text-align: center;
+  cursor: pointer;
+  display: inline-block;  
+  -webkit-user-select: none; /*webkitä¯ÀÀÆ÷*/  
+  user-select: none;
+}
+
+.do-button { 
+  margin-left:30px; 
+}
+
+.do-button.disabled {
+  color: #ccc;
+  cursor:default;
+  border-color: #ccc;
+}
+
+
+#table {
+  border-collapse: collapse;
+  border-left: solid 1px #d7d7d7;
+  border-top: solid 1px #d7d7d7;
+  border-bottom: solid 1px #d7d7d7;
+  width:100%;
+  margin-top:25px;
+  margin-bottom:120px;
+}
+
+#table .active-row > td,
+#table .active-row > th {
+  border-bottom-color: red;
+}
+
+#table .active-row + tr > td {
+  border-left-color: red;
+  border-right-color: red;
+  border-bottom-color: red;
+} 
+
+#table td, 
+#table th{
+  border: 1px solid #d7d7d7;
+  line-height: 30px;
+  height: 30px;
+  font-size: 12px;
+  font-family: SimSun;
+  color: #757575;
+  text-align: center;
+  padding: 5px;
+  cursor: default;
+  min-width: 80px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#table th {
+  font-size: 17px;
+  line-height: 40px;
+  font-weight: bold;
+  color: #484848;
+  background-color: #fafafa;
+}
+
+#table .editable {
+  cursor:pointer;
+  -webkit-user-select: auto
+}
+
+#table .order-header {
+  width: 30px;
+}
+
+#table .order,
+#table .operation{
+  position:relative;
+}
+
+#table .insert {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  left: -36px;
+  top: -13px;
+  background-image: url(img/right.png);
+}
+
+#table .active-insert {
+  background-size: 100% 100%;
+  cursor:pointer;
+}
+
+#table .move {
+  position: absolute;
+  width: 62px;
+  height: 26px;
+  top: 50%;
+  margin-top: -13px;
+  right:-72px;
+}
+
+#table .move-up {
+  background-image: url(img/up.png);
+}
+
+#table .move-down {
+  margin-left: 10px;
+  background-image: url(img/down.png);
+}
+
+#table .move-up.disabled {
+  cursor:default;
+  background-image: url(img/up-disabled.png);
+}
+
+#table .move-down.disabled {
+  cursor: default;
+  background-image: url(img/down-disabled.png);
+}
+
+#table .move > div {
+  width: 26px;
+  height: 26px; 
+  cursor: pointer;
+  background-size: 100% 100%;
+  display:none;
+}
+
+#table .active-move > div {
+  display: inline-block;
+}
+
+#table .operation-header {
+  width: 50px;
+}
+
+#table cite {
+  cursor: pointer;
+  background-image: url(img/delete.png);
+  background-size: 100% 100%;
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+@media screen and (max-width: 800px) {
+  #container {
+    width: 96%;
+  }
+
+  #add,
+  .do-button {
+    width: 80px;
+    height: 42px;
+    line-height: 42px;
+    font-size: 17px;
+  }
+
+  .do-button {
+    margin-left: 15px;
+  }
+
+  .order,
+  .order-header,
+  .move,
+  .active-move,
+  .insert,
+  .active-insert {
+    display:none;
+  }
+}
