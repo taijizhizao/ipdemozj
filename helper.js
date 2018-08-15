@@ -37,7 +37,7 @@ function getCookie() {
 function loadData(callback) {
   $.ajax({
     type: 'post',
-    url: 'http://route.showapi.com/870-1',
+    url: 'https://route.showapi.com/870-1',
     dataType: 'json',
     data: {
       "showapi_timestamp": formatterDateTime(),
@@ -87,7 +87,7 @@ function saveData(str) {
     busy = false;
     $.ajax({
       type: 'post',
-      url: 'http://route.showapi.com/870-1',
+      url: 'https://route.showapi.com/870-1',
       dataType: 'json',
       data: {
         "showapi_timestamp": formatterDateTime(),
