@@ -44,8 +44,20 @@ function drawTable(catelog, data) {
       td.attr('row-id', data[i].id);
       td.attr('field', catelog.columns[j].field);
       td.attr('rowIndex', i)
-      td.attr('columnIndex', j)
-      td.html(data[i][catelog.columns[j].field]);
+      td.attr('columnIndex', j)      
+
+      var text = data[i][catelog.columns[j].field];
+      var match = /^((ht|f)tps?):\/\/[\w\-]+(\.[\w\-]+)+([\w\-\.,@?^=%&:\/~\+#]*[\w\-\@?^=%&\/~\+#])?$/
+      if (!editable && match.test(text)) {
+        var a = $("<a></a>");
+        a.attr('href', text);
+        a.attr('target', '_blank');
+        a.html(text);
+        td.append(a);
+      } else {
+        td.html(data[i][catelog.columns[j].field]);
+      }
+
       tr.append(td);
     }
 
