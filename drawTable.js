@@ -35,7 +35,12 @@ function drawTable(catelog, data) {
     td.append(insert);
 
     for (var j = 0; j < catelog.columns.length; j++) {
-      td = $("<td contenteditable='true' class='editable'></td>");
+      if (editable) {
+        td = $("<td contenteditable='true' class='editable'></td>");
+      } else {
+        td = $("<td></td>");
+      }
+      
       td.attr('row-id', data[i].id);
       td.attr('field', catelog.columns[j].field);
       td.attr('rowIndex', i)

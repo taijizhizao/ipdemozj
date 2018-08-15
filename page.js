@@ -1,7 +1,12 @@
 ﻿var tab = catelogs[0].tag;
 var data = {};
 var moveReady = true;
-//var editing = false;
+var editable = window.location.hash == '#edit';
+
+
+if (editable == false) {
+  $("#container").addClass('no-edit');
+}
 
 for (var i = 0; i < catelogs.length; i++) {
   var tag = catelogs[i].tag;

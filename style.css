@@ -220,3 +220,13 @@ body > div:last-child {
     display:none;
   }
 }
+
+
+
+.no-edit #add,
+.no-edit .do-button,
+.no-edit .operation-header,
+.no-edit .operation,
+.no-edit .hide-button{
+  display:none;
+}
